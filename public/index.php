@@ -2,17 +2,19 @@
 
 require_once '../vendor/autoload.php';
 
-//require_once '../src/Ivanov/Currency.php';
-//require_once '../src/Petrov/Currency.php';
+use App\Rgb\Creatergb;
+
+$a = new Creatergb(100, 100, 100);
+$mixedColor = $a->mix(new Creatergb(200,200,200));
+var_dump($mixedColor->get_red());
+//var_dump($mixedColor->get_green());
+//var_dump($mixedColor->get_blue());
 
 
-use \Project\pr\Currency as Curr;
-use \App\Ivanov\pr\Currency as ivanovCurrency;
-use \App\Petrov\Currency as petrovCurrency;
 
-$Curr = new Curr();
-$Ivanov = new ivanovCurrency();
-$Petrov = new petrovCurrency();
+
+
+
 
 
 

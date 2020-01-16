@@ -23,3 +23,9 @@ services:
       - app
     volumes:
       - .:/src/app
+  composer:
+    restart: 'no'
+    image: composer/composer:php7
+    command: dump-autoload
+    volumes:
+      - .:/app
